@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DnD</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            html, body {
+                overscroll-behavior: none; /* Chặn sự kiện cuộn trên mobile */
+            }
+
+            body {
+                padding: 10px;
+                height: 100vh;
+            }
+
+            .dropzone {
+                width: 100%;
+                height: 100px;
+                border: 3px dashed #ccc;
+            }
+
+            .container {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                justify-content: space-between;
+            }
+
+            .drag {
+                display: inline-block;
+                padding: 10px;
+                border-radius: 5px;
+                background: #333;
+                color: #fff;
+                user-select: none;
+                cursor: grab;
+            }
+
+            .drag:active {
+                cursor: grabbing; /* Tóm lại */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="dropzone"></div>
+
+            <div class="content">
+                <div class="drag">Drag me!</div>
+            </div>
+        </div>
+
+
+        <script src="./drag.js"></script>
+    </body>
+</html>

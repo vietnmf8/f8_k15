@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Javascript</title>
+
+        <style>
+            .modal {
+                position: fixed;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.5);
+                display: none;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .modal.open {
+                display: flex;
+            }
+
+            .modal-container {
+                background: #fff;
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 
+        1. Tự CSS fixed, content căn giữa
+        2. Có overlay vào chính class "modal"
+        3. Click vào overlay hoặc nút close sẽ tắt modal
+        4. Bấm #open-modal sẽ mở modal
+        5. Chặn nổi bọt khi click vào modal-container
+        6. Bấm #modal-close sẽ tắt modal
+        -->
+
+        <div id="open-modal">Open modal</div>
+
+        <div class="modal">
+            <div class="modal-container">
+                <!-- Ngăn chặn nổi bọt -->
+                <div class="modal-header">Heading</div>
+                <div class="modal-content">Modal content</div>
+                <div class="modal-footer">
+                    <button class="modal-close">Close</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="./main.js"></script>
+    </body>
+</html>

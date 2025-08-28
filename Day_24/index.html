@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Javascript</title>
+
+        <style>
+            .go-to-top {
+                position: fixed;
+                right: 20px;
+                bottom: 20px;
+                padding: 10px 15px;
+                background-color: orange;
+                color: white;
+                font-weight: bold;
+                border-radius: 5px;
+                cursor: pointer;
+                /* display: none; */
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+            }
+
+            .go-to-top.show {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            /* html, body {
+                scroll-behavior: smooth;
+            } */
+
+            .context-menu {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: white;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                padding: 10px;
+                border-radius: 5px;
+                list-style: none;
+                display: none;
+            }
+
+            .context-menu.show {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>DOM EVENT</h1>
+        <div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+                porro optio veniam sequi quaerat ullam adipisci minima error!
+                Blanditiis, aperiam!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+                porro optio veniam sequi quaerat ullam adipisci minima error!
+                Blanditiis, aperiam!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+                porro optio veniam sequi quaerat ullam adipisci minima error!
+                Blanditiis, aperiam!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+                porro optio veniam sequi quaerat ullam adipisci minima error!
+                Blanditiis, aperiam!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+                porro optio veniam sequi quaerat ullam adipisci minima error!
+                Blanditiis, aperiam!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+                porro optio veniam sequi quaerat ullam adipisci minima error!
+                Blanditiis, aperiam!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+                porro optio veniam sequi quaerat ullam adipisci minima error!
+                Blanditiis, aperiam!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+                porro optio veniam sequi quaerat ullam adipisci minima error!
+                Blanditiis, aperiam!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+                porro optio veniam sequi quaerat ullam adipisci minima error!
+                Blanditiis, aperiam!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+                porro optio veniam sequi quaerat ullam adipisci minima error!
+                Blanditiis, aperiam!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+                porro optio veniam sequi quaerat ullam adipisci minima error!
+                Blanditiis, aperiam!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+                porro optio veniam sequi quaerat ullam adipisci minima error!
+                Blanditiis, aperiam!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+                porro optio veniam sequi quaerat ullam adipisci minima error!
+                Blanditiis, aperiam!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+                porro optio veniam sequi quaerat ullam adipisci minima error!
+                Blanditiis, aperiam!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+                porro optio veniam sequi quaerat ullam adipisci minima error!
+                Blanditiis, aperiam!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+                porro optio veniam sequi quaerat ullam adipisci minima error!
+                Blanditiis, aperiam!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+                porro optio veniam sequi quaerat ullam adipisci minima error!
+                Blanditiis, aperiam!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+                porro optio veniam sequi quaerat ullam adipisci minima error!
+                Blanditiis, aperiam!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+                porro optio veniam sequi quaerat ullam adipisci minima error!
+                Blanditiis, aperiam!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+                porro optio veniam sequi quaerat ullam adipisci minima error!
+                Blanditiis, aperiam!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+                porro optio veniam sequi quaerat ullam adipisci minima error!
+                Blanditiis, aperiam!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+                porro optio veniam sequi quaerat ullam adipisci minima error!
+                Blanditiis, aperiam!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+                porro optio veniam sequi quaerat ullam adipisci minima error!
+                Blanditiis, aperiam!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+                porro optio veniam sequi quaerat ullam adipisci minima error!
+                Blanditiis, aperiam!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+                porro optio veniam sequi quaerat ullam adipisci minima error!
+                Blanditiis, aperiam!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+                porro optio veniam sequi quaerat ullam adipisci minima error!
+                Blanditiis, aperiam!
+            </p>
+        </div>
+
+        <form class="form" action="">
+            <button class="abc">ABC</button>
+        </form>
+
+        <ul class="context-menu">
+            <li>Option 1</li>
+            <li>Option 1</li>
+            <li>Option 1</li>
+        </ul>
+
+        <!-- <a href="#" class="go-to-top">Go To Top</a> -->
+        <div class="go-to-top">Go To Top</div>
+        <script src="./main.js"></script>
+    </body>
+</html>
