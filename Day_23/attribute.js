@@ -79,7 +79,6 @@
 // `;
 // document.head.appendChild(style);
 
-
 /* ==========================================================
  * Kích thước phần tử
  * ==========================================================*/
@@ -89,8 +88,8 @@ const tag = document.querySelector("#box");
 tag.clientWidth; // width + padding (không bao gồm border, margin, thanh cuộn) -> 120
 tag.clientHeight; // height + padding (không bao gồm border, margin, thanh cuộn) -> 120
 
-tag.offsetWidth; // width + padding + border (không bao gồm margin, thanh cuộn) -> 140
-tag.offsetHeight; // height + padding + border (không bao gồm margin, thanh cuộn) -> 140
+tag.offsetWidth; // width + padding + border + scrolling ( bao gồm margin, thanh cuộn) -> 140
+tag.offsetHeight; // height + padding + border + scrolling ( bao gồm margin, thanh cuộn) -> 140
 
 /* Vị trí */
 tag.clientTop; // Trả về khoảng cách tính  từ mép trên nội dung bên trong (content area) đến mép trên border (viền) của element --> Chính là độ dày của border-top (nếu có).
