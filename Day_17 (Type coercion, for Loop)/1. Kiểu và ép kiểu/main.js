@@ -140,10 +140,21 @@ console.log(1 + true); // số
 console.log(1 + null); // số
 console.log(1 - "2"); // số
 
-/**
- * Vòng lặp
- */
 
-/**
- * Object cơ bản
- */
+/* Symbol */
+const value1 = Symbol("name");
+const value2 = Symbol("name");
+
+console.log(value1 === value1); //true
+console.log(value1 === value2); //false
+
+const value = Symbol("name");
+
+const person = {
+    [Symbol("name")]: "Nguyen Van A" // thuộc tính ẩn vì không truy cập được bên ngoài nữa --> [key khác chuỗi dùng dấu ngoặc vuông]
+}
+
+person[value] = 'Nguyen Minh Viet'
+// person[value] !== person[Symbol("name")] --> Khác nhau
+
+
