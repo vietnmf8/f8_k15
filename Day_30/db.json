@@ -1,0 +1,38 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "Jack - J97",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "Sơn Tùng",
+      "views": 100
+    },
+    {
+      "title": "Tiêu đề 5",
+      "description": "Mô tả bài đăng 3",
+      "views_count": 1,
+      "id": "d641"
+    },
+    {
+      "id": "f982",
+      "title": "Tiêu đề 1",
+      "description": "Mô tả bài đăng 1",
+      "views_count": 0
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ]
+}
