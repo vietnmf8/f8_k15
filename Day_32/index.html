@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- root -->
+        <div id="root"></div>
+
+        <!-- CDN -->
+        <script
+            crossorigin
+            src="https://unpkg.com/react@18/umd/react.development.js"
+        ></script>
+        <script
+            crossorigin
+            src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+        ></script>
+
+        <!-- Babel -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script type="text/babel">
+            const heading = 'Todo List'
+
+            const wrapper = (
+                <div>
+                    <h1>{heading}</h1>
+                    <ul className="tasks-list">
+                        <li className="task-item" title="Item 1">
+                            <a href="/tasks/1" className="task-link">
+                                Item 1
+                            </a>
+                        </li>
+                        <li className="task-item" title="Item 2">
+                            <a href="/tasks/2" className="task-link">
+                                Item 2
+                            </a>
+                        </li>
+                        <li className="task-item" title="Item 3">
+                            <a href="/tasks/3" className="task-link">
+                                Item 1
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            );
+
+            const root = ReactDOM.createRoot(document.querySelector("#root"));
+            root.render(wrapper);
+        </script>
+
+        <!-- Logic -->
+        <!-- <script>
+            /* h1 */
+            const h1 = React.createElement("h1", null, "Todo List");
+
+            /* a */
+            const a_1 = React.createElement(
+                "a",
+                { href: "/task/1", className: "task-link" },
+                "Item 1"
+            );
+            const a_2 = React.createElement(
+                "a",
+                { href: "/task/1", className: "task-link" },
+                "Item 2"
+            );
+            const a_3 = React.createElement(
+                "a",
+                { href: "/task/1", className: "task-link" },
+                "Item 3"
+            );
+
+            /* li */
+            const li_1 = React.createElement(
+                "li",
+                {
+                    className: "task-item",
+                    title: "Item 1",
+                },
+                a_1
+            );
+            const li_2 = React.createElement(
+                "li",
+                {
+                    className: "task-item",
+                    title: "Item 2",
+                },
+                a_2
+            );
+            const li_3 = React.createElement(
+                "li",
+                {
+                    className: "task-item",
+                    title: "Item 3",
+                },
+                a_3
+            );
+
+            /* ul */
+            const ul = React.createElement(
+                "ul",
+                { className: "tasks-list" },
+                li_1,
+                li_2,
+                li_3
+            );
+
+            /* div */
+            const div = React.createElement("div", null, h1, ul);
+
+            /* Render */
+            const root = ReactDOM.createRoot(document.querySelector("#root"));
+            root.render(div);
+        </script> -->
+    </body>
+</html>
