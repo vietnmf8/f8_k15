@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@layer base {
+    :root {
+        --my-padding: 9px
+    }
+}
+

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1 id="output"></h1>
+        <button id="increase">Increase 10$</button>
+        <button id="decrease">Decrease 10$</button>
+        <!-- Redux CDN -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.2.1/redux.js"
+            integrity="sha512-Olr8rkMYuxq3KpAPjYA/mAVYe7EIEP4RkhoAvD/qOrlauzE4CTvpQSg/cRX0/5Qreret4aobD0vg1xtjBqR7VA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+
+        <!-- JS -->
+        <script>
+            console.log("Redux:", Redux);
+
+            const MyRedux = {
+                createStore(reducer, preloadedState) {
+                    let state = reducer(preloadedState, {
+                        type: "@@redux/INITl.h.o.u.c.5",
+                    });
+
+                    // 4. Có thể subscribe nhiều lần
+                    const listeners = [];
+
+                    return {
+                        // 1. Hàm lấy ra State hiện tại
+                        getState() {
+                            return state;
+                        },
+                        // 2. Hàm gửi đi hành động
+                        dispatch(action) {
+                            // Gọi reducer => trả ra state mới => cập nhật state mới
+                            state = reducer(state, action);
+
+                            // listener được gọi khi state mới được trả ra
+                            listeners.forEach((listener) => listener());
+                        },
+                        // 3. Hàm subscribe biết khi nào state thay đổi
+                        subscribe(listener) {
+                            // Thêm vào mảng mỗi lần subscribe
+                            listeners.push(listener);
+
+                            // Trả ra hàm unsubscribe
+                            return () => {
+                                const index = listeners.indexOf(listener);
+                                listeners.splice(index, 1);
+                            };
+                        },
+                    };
+                },
+            };
+
+            /* Initial state */
+            const initialState = 0;
+
+            /* Reducer */
+            function reducer(state, action) {
+                console.log(action);
+                console.log("reducer được gọi");
+                switch (action.type) {
+                    case "increase":
+                        return state + action.payload;
+                    case "decrease":
+                        return state - action.payload;
+                    default:
+                        return state;
+                }
+            }
+            /* Tạo store */
+            const store = Redux.createStore(reducer, initialState);
+            console.log("store:", store);
+
+            /* Get DOM */
+            const $output = document.querySelector("#output");
+            const $increase = document.querySelector("#increase");
+            const $decrease = document.querySelector("#decrease");
+
+            $output.innerText = store.getState();
+
+            /* Event handler */
+            $increase.addEventListener("click", () => {
+                store.dispatch({ type: "increase", payload: 10 });
+            });
+
+            $decrease.addEventListener("click", () => {
+                store.dispatch({ type: "decrease", payload: 10 });
+            });
+
+            /* Subscribe */
+            store.subscribe(() => {
+                output.innerText = store.getState();
+            });
+        </script>
+    </body>
+</html>

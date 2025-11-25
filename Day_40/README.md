@@ -1,0 +1,7 @@
+-   Bước 1: Tạo store
+-   Bước 2: Tạo initState
+-   Bước 3: Tạo rootReducer
+-   Bước 4: Return state ở case default
+-   Bước 5: Bọc bằng Provider và truyền store
+-   Bước 6: Cấu hình API
+-   Bước 7: Gọi API
